@@ -1,0 +1,19 @@
+@import "normalize.css";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ccc;
+}
+
+a {
+    color: blue;
+    text-decoration: underline;
+}

@@ -1,0 +1,4 @@
+.o-rsd-container {
+    padding: 0 15px;
+    /*padding: 0 15rem; */ /* it is better if they do not follow font size otherwise thet increase drastically */
+}
