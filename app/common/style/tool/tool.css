@@ -1,0 +1,7 @@
+:root {    
+    --rsd-mixin-container: {
+        padding: 0 var(--rsd-gut);
+        margin: 0 auto;
+        max-width: var(--rsd-container-width);
+    }
+}

@@ -1,0 +1,14 @@
+.o-rsd-grid {
+    margin-right: calc(-1 * var(--rsd-gut));
+    margin-left: calc(-1 * var(--rsd-gut));
+    
+    &__col {
+        padding-right: var(--rsd-gut);
+        padding-left: var(--rsd-gut);
+        
+        @media (--rsd-small-up-viewport) {
+            float: left;
+            width: 50%;
+        }
+    }
+}

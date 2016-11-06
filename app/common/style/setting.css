@@ -1,0 +1,15 @@
+:root {
+    --rsd-font-size-base: 14px;
+    
+    --rsd-container-width: 800px;
+    
+    --rsd-gut: 15px;
+    
+    --rsd-spacing-small: 10px;
+    --rsd-spacing-medium: 25px;
+    --rsd-spacing-large: 60px;
+}
+
+@custom-media --rsd-small-up-viewport (width >= 600px);
+@custom-media --rsd-medium-up-viewport (width >= 768px);
+@custom-media --rsd-large-up-viewport (width >= 1024px);

@@ -1,0 +1,33 @@
+.t-rsd-mg {
+    margin: var(--rsd-spacing-small);
+}
+
+.t-rsd-mgv {
+    margin-top: var(--rsd-spacing-small);
+    margin-bottom: var(--rsd-spacing-small);
+}
+
+.t-rsd-mgh {
+    margin-right: var(--rsd-spacing-small);
+    margin-left: var(--rsd-spacing-small);
+}
+
+.t-rsd-mgt {
+    margin-top: var(--rsd-spacing-small);
+}
+
+.t-rsd-mgr {
+    margin-right: var(--rsd-spacing-small);
+}
+
+.t-rsd-mgb {
+    margin-bottom: var(--rsd-spacing-small);
+}
+
+.t-rsd-mgl {
+    margin-left: var(--rsd-spacing-small);
+}
+
+.t-rsd-img-fluid {
+    max-width: 100% !important;
+}

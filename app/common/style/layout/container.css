@@ -1,0 +1,14 @@
+.o-rsd-container {
+    @apply --rsd-mixin-container;
+    
+    &--page {
+        background-color: white;
+        padding-top: var(--rsd-gut);
+        padding-bottom: var(--rsd-gut);
+    }
+}
+
+.o-rsd-container-fluid {
+    padding: 0 var(--rsd-gut);
+    background-color: white;
+}

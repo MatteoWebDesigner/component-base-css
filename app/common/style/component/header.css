@@ -1,0 +1,7 @@
+.c-rsd-header {
+    background-color: #2463b0;
+    
+    &__container {
+        @apply --rsd-mixin-container;
+    }
+}

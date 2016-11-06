@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 14px;
+    font-size: var(--rsd-font-size-base);
     font-family: Arial, sans-serif;
 }
 
@@ -13,7 +13,19 @@ body {
     background-color: #ccc;
 }
 
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+}
+    
+p {
+    margin-top: 0;
+}
+
 a {
     color: blue;
     text-decoration: underline;
+}
+
+ul,ol {
+    margin-top: 0;
 }

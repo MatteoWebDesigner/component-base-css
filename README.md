@@ -1,5 +1,8 @@
+# Setup
+`npm i`
+
 # Run server
-> npm start
+`npm start`
 
 # Build
-> gulp
+`npm run-script build`

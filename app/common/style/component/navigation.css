@@ -1,0 +1,17 @@
+.c-rsd-navigation {
+    margin: 0;
+    padding: var(--rsd-gut) 0;
+    
+    &__item {
+        display: inline-block;
+        margin-right: 5px;
+    }
+    
+    &__item:last-child {
+        margin-right: 0;
+    }
+    
+    &__link {
+        color: white;
+    }
+}
