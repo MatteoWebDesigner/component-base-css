@@ -1,4 +1,4 @@
-.app-c-button
+:local(.app-c-button)
 {
     font-size: var(--rsd-font-size-base);
 

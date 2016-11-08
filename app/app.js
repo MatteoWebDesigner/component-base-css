@@ -3,9 +3,10 @@ import uirouter from 'angular-ui-router';
 import common from './common/module.js';
 
 /* @ngInject */
-function config ($locationProvider, $stateProvider, $urlRouterProvider) {
+function config($compileProvider, $locationProvider, $stateProvider, $urlRouterProvider) {
+    $compileProvider.debugInfoEnabled(true);
     $locationProvider.html5Mode(true);
-    
+
     $urlRouterProvider.otherwise('/home');
 
     $stateProvider
@@ -20,8 +21,8 @@ function config ($locationProvider, $stateProvider, $urlRouterProvider) {
 };
 
 angular
-.module('app', [
-    uirouter,
-    common
-])
-.config(config);
+    .module('app', [
+        uirouter,
+        common
+    ])
+    .config(config);
