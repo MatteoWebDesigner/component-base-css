@@ -11,46 +11,44 @@ module.exports = {
         filename: 'app.js'
     },
     module: {
-        loaders: [
-            {
-                test: /\.css$/,
-                loader: 'style'
+        loaders: [{
+            test: /\.css$/,
+            loader: 'style'
+        }, {
+            test: /\.css$/,
+            loader: 'css',
+            query: {
+                localIdentName: '[local]-[hash:base64:8]',
+                browsers: ["last 2 version", "IE >= 10"],
+                minimize: true,
+                sourceMap: true
             }
-            ,{
-                test: /\.css$/,
-                loader: 'css',
-                query: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    browsers: ["last 2 version", "IE >= 10"],
-                    minimize: true,
-                    sourceMap: true
-                }
-            }
-            ,{
-                test: /\.js$/,
-                loader: 'ng-annotate',
-                exclude: '/node_modules/'
-            }
-            ,{
-                test: /\.js$/,
-                loader: 'babel',
-                query: {
-                    presets: ['es2015']
-                },
-                exclude: '/node_modules/'
-            }
-        ]
+        }, {
+            test: /\.js$/,
+            loader: 'ng-annotate',
+            exclude: '/node_modules/'
+        }, {
+            test: /\.js$/,
+            loader: 'babel',
+            query: {
+                presets: ['es2015']
+            },
+            exclude: '/node_modules/'
+        }]
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin()
-        // ,new CopyWebpackPlugin(
-        //     [
-        //         { from: 'app/*.*', to: 'build' }
-        //         ,{ from: 'app/common/assets', to: 'build' }
-        //     ]
-        //     ,{
-        //         ignore: ['*.js']
-        //     }
-        // )
+        new webpack.optimize.UglifyJsPlugin(),
+        new CopyWebpackPlugin(
+            [{
+                from: '*.*',
+                context: 'app'
+            }, {
+                from: 'assets',
+                to: 'assets',
+                context: 'app/common'
+            }], {
+                ignore: ['*.js']
+            }
+        )
     ]
 }
