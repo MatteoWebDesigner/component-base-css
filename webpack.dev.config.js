@@ -5,10 +5,13 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = {
     debug: true,
     devtool: 'source-map',
-    entry: './app/app.js',
+    entry: {
+        app: './app/app.js',
+        vendor: ['angular','angular-ui-router','lodash']
+    },
     output: {
         path: __dirname + '/build/',
-        filename: 'app.js'
+        filename: '[name].js'
     },
     module: {
         loaders: [{
@@ -37,7 +40,9 @@ module.exports = {
         }]
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin(),
+        // new HtmlWebpackPlugin({
+        //     title: 'Webpack demo'
+        // })
         new CopyWebpackPlugin(
             [{
                 from: '*.*',
@@ -49,6 +54,10 @@ module.exports = {
             }], {
                 ignore: ['*.js']
             }
-        )
+        ),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor'
+        }),
+        new webpack.optimize.UglifyJsPlugin()
     ]
 }
