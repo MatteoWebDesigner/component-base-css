@@ -1,13 +1,7 @@
-.button
+.header
 {
     font-size: var(--rsd-font-size-base);
-
     padding: 5px 15px;
-
-    cursor: pointer;
-
     color: white;
-    border: 1px solid black;
-    border-radius: 2px;
     background-color: #2f5685;
 }

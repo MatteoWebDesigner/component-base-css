@@ -1,0 +1,20 @@
+.pageContainerClass {    
+    padding: 0 var(--rsd-gut);
+    margin: 0 auto;
+    max-width: var(--rsd-container-width);
+}
+
+.pageContainerFluid {
+    composes: pageContainerClass;
+    
+    background-color: white;
+    padding-top: var(--rsd-gut);
+    padding-bottom: var(--rsd-gut);
+}
+
+.pageContainer {
+    composes: pageContainerClass;
+    
+    padding: 0 var(--rsd-gut);
+    background-color: white;
+}

@@ -17,16 +17,23 @@ module.exports = {
         loaders: [{
             test: /\.css$/,
             loader: 'style'
-        }, {
+        }, 
+        {
             test: /\.css$/,
             loader: 'css',
             query: {
+                modules: true,
                 localIdentName: '[local]-[hash:base64:8]',
                 browsers: ["last 2 version", "IE >= 10"],
                 minimize: true,
                 sourceMap: true
             }
-        }, {
+        },
+        {
+            test: /\.css$/,
+            loader: 'postcss-loader'
+        },
+        {
             test: /\.js$/,
             loader: 'ng-annotate',
             exclude: '/node_modules/'
